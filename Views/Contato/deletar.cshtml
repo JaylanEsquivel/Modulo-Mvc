@@ -1,0 +1,52 @@
+@model ModuloMvc.Models.Contato;
+
+@{
+    ViewData["Title"] = "Deletar Contato";
+}
+
+<h2 style="color: rgb(255, 68, 68)">Deseja realmente deletar esse contato !</h2>
+
+
+<div>
+    <div class="row">
+
+        <div class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Nome);
+        </div>
+        <div class="col-sm-10">
+
+            @Html.DisplayFor(x => x.Nome);
+        </div>
+        <div class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Email);
+        </div>
+        <div class="col-sm-10">
+            @Html.DisplayFor(x => x.Email);
+        </div>
+        <div class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Telefone);
+        </div>
+        <div class="col-sm-10">
+            @Html.DisplayFor(x => x.Telefone);
+        </div>
+        <div class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Status);
+        </div>
+        <div class="col-sm-10">
+            @Html.DisplayFor(x => x.Status);
+        </div>
+
+
+
+    </div>
+</div>
+
+<div>
+    <form asp-action="Deletar">
+        <input type="submit" class="btn btn-danger" value="Deletar" />
+    </form>
+
+
+
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+</div>
